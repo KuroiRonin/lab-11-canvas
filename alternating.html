@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body onload="draw()">
+<canvas id = "sketch" width = "500" height = "500" ></canvas>
+<script>
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	var x = 10;
+	for(var i =1; i<=10; i++) {
+	 if (i%2 === 1) {
+		context.fillStyle= "#23D9CA";
+		context.beginPath();
+		context.arc(x,250,10,0,2*Math.PI,true);
+		context.closePath();
+		context.fill();
+		x+=20
+	} else {
+		context.fillStyle ="#FFDF00";
+		context.fillRect(x,240,20,20);
+		x+=40;
+	}
+	}	
+</script>
+</body>
+</html>
